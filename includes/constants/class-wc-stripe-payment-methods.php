@@ -29,6 +29,7 @@ class WC_Stripe_Payment_Methods {
 	public const MULTIBANCO        = 'multibanco';
 	public const OXXO              = 'oxxo';
 	public const P24               = 'p24';
+	public const PAY_BY_BANK       = 'pay_by_bank';
 	public const SEPA              = 'sepa';
 	public const SEPA_DEBIT        = 'sepa_debit';
 	public const SOFORT            = 'sofort';
@@ -93,6 +94,17 @@ class WC_Stripe_Payment_Methods {
 	public const WALLET_PAYMENT_METHODS = [
 		self::CASHAPP_PAY,
 		self::WECHAT_PAY,
+	];
+
+	/**
+	 * Payment method types that Stripe accepts Level 3 data for.
+	 * Level 3 is card-network only.
+	 *
+	 * @var array
+	 */
+	public const LEVEL3_SUPPORTED_PAYMENT_METHODS = [
+		self::CARD,
+		self::CARD_PRESENT,
 	];
 
 	/**
